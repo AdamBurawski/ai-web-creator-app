@@ -1,8 +1,8 @@
-# Dokument wymagań produktu (PRD) - AutoBuilder
+# Dokument wymagań produktu (PRD) - AutoWebBuilder
 
 ## 1. Przegląd produktu
 
-AutoBuilder to innowacyjna aplikacja wspierająca web-developera, która automatyzuje proces budowy stron internetowych. Aplikacja analizuje przesłany projekt graficzny, a następnie:
+AutoWebBuilder to innowacyjna aplikacja wspierająca web-developera, która automatyzuje proces budowy stron internetowych. Aplikacja analizuje przesłany projekt graficzny, a następnie:
 
 - Generuje strukturę ACF w WordPressie,
 - Tworzy odpowiadające komponenty w React/Gatsby,
@@ -19,7 +19,7 @@ Web-developerzy często spędzają dużo czasu na ręcznym tworzeniu struktury b
 - Brak spójności między backendem a frontendem,
 - Długi czas wdrożenia wynikający z konieczności ręcznych interwencji.
 
-AutoBuilder rozwiązuje te problemy poprzez automatyzację procesu interpretacji projektu graficznego, co znacząco skraca czas produkcji i redukuje ryzyko błędów.
+AutoWebBuilder rozwiązuje te problemy poprzez automatyzację procesu interpretacji projektu graficznego, co znacząco skraca czas produkcji i redukuje ryzyko błędów.
 
 ## 3. Wymagania funkcjonalne
 
