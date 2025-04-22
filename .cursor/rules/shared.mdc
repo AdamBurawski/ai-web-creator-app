@@ -1,0 +1,72 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# AI Rules for WebDevAI
+
+Aplikacja multiagentowa do automatyzacji tworzenia stron internetowych w oparciu o WordPress+ACF jako backend oraz React/Gatsby jako frontend. Na podstawie projektu graficznego system buduje strukturę ACF w WordPress, a następnie tworzy odpowiednie komponenty w React/Gatsby, integruje je i wdraża na serwery produkcyjne.
+
+## Tech Stack
+
+- Node.js 20+
+- TypeScript 5
+- Express.js (dla API)
+- React 18+ (dla komponentów frontendowych)
+- Gatsby 5+ (framework dla frontendu)
+- WordPress REST API
+- ACF Pro REST API
+- OpenAI API / Anthropic API (dla analizy wizualnej)
+- GitHub API (dla CI/CD)
+- Netlify API (dla wdrożeń)
+
+## Project Structure
+
+When introducing changes to the project, always follow the directory structure below:
+
+- `./src` - source code
+- `./src/agents` - architektura multiagentowa
+  - `./src/agents/vision` - agent analizujący projekt graficzny 
+  - `./src/agents/acf` - agent generujący struktury ACF
+  - `./src/agents/react` - agent tworzący komponenty React/Gatsby
+  - `./src/agents/deploy` - agent wdrażający zmiany na serwery
+- `./src/api` - API endpoints
+- `./src/types` - Shared types (Entities, DTOs, Interfaces)
+- `./src/services` - usługi komunikacji z zewnętrznymi API (WordPress, GitHub, Netlify)
+- `./src/templates` - szablony komponentów i struktur
+- `./src/utils` - narzędzia pomocnicze
+- `./src/middleware` - middleware Express.js
+- `./src/models` - modele danych
+- `./src/database` - konfiguracja i połączenie z bazą danych
+- `./public` - zasoby statyczne
+- `./tests` - testy jednostkowe i integracyjne
+
+When modifying the directory structure, always update this section.
+
+## Coding practices
+
+### Guidelines for clean code
+
+- Używaj typowania TypeScript dla wszystkich komponentów i funkcji.
+- Implementuj wzorzec Repository dla operacji na danych.
+- Stosuj wzorzec Dependency Injection dla serwisów.
+- Używaj async/await zamiast callback's lub Promise.then().
+- Implementuj obsługę błędów na początku funkcji (guard clauses).
+- Loguj błędy i operacje krytyczne do scentralizowanego systemu logowania.
+- Stosuj komunikację międzyagentową opartą na wzorcu pub/sub.
+- Dziel operacje agentów na mniejsze, testowalne funkcje.
+- Przechowuj sekrety i konfigurację w zmiennych środowiskowych.
+- Stosuj TDD (Test-Driven Development) dla krytycznych komponentów.
+- Dokumentuj API używając standardu OpenAPI/Swagger.
+- Implementuj cache dla czasochłonnych operacji.
+- Zapewnij idempotentność operacji API.
+- Używaj transakcji bazy danych dla operacji zmieniających wiele rekordów.
+- Place the happy path last in the function for improved readability.
+- Avoid unnecessary else statements; use if-return pattern instead.
+- Use guard clauses to handle preconditions and invalid states early.
+- Implement proper error logging and user-friendly error messages.
+- Consider using custom error types or error factories for consistent error handling.
+
+
+
+
